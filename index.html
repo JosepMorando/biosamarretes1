@@ -3,45 +3,65 @@
   <head>
     <title>BIOSAMARRETES</title>
     <style>
-      /* Reset styles */
-      * {
-        box-sizing: border-box;
-        margin: 0;
-        padding: 0;
-      }
-      
-      /* Typography */
-      body {
-        font-family: sans-serif;
-        font-size: 16px;
-        line-height: 1.5;
-        color: #333;
-      }
-      
-      h1 {
-        font-size: 2.5rem;
-        text-align: center;
-        margin-bottom: 1.5rem;
-      }
-      
-      /* Grid */
+      /* Style for the grid container */
       .grid-container {
         display: grid;
         grid-template-columns: repeat(3, 1fr);
         grid-gap: 10px;
-        margin: 0 auto;
-        max-width: 800px;
+        background: linear-gradient(to bottom right, #ffd700, #ff7f50);
+        padding: 20px;
+        border-radius: 10px;
       }
-      
+      /* Style for the grid item */
       .grid-item {
-        border: 1px solid #ccc;
+        border: 1px solid #00bfff;
         padding: 10px;
         text-align: center;
+        transition: all 0.3s ease;
+        position: relative;
       }
-      
+      /* Style for the image */
       .grid-item img {
         max-width: 100%;
         max-height: 100%;
+      }
+      /* Style for the image hover animation */
+      .grid-item:hover img {
+        transform: scale(1.05) rotate(3deg);
+      }
+      /* Style for the image hover text */
+      .grid-item .overlay {
+        position: absolute;
+        top: 0;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background-color: rgba(0, 0, 0, 0.5);
+        opacity: 0;
+        transition: all 0.3s ease;
+      }
+      /* Style for the image hover text on hover */
+      .grid-item:hover .overlay {
+        opacity: 1;
+      }
+      /* Style for the text on hover */
+      .grid-item .text {
+        color: white;
+        font-size: 20px;
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        -ms-transform: translate(-50%, -50%);
+        text-align: center;
+      }
+      /* Style for the header */
+      h1 {
+        background-color: #ff7f50;
+        color: white;
+        padding: 20px;
+        border-radius: 10px;
+        text-align: center;
       }
     </style>
   </head>
@@ -50,22 +70,20 @@
     <div class="grid-container">
       <div class="grid-item">
         <img src="images/sudadera2.jpg" alt="t-shirt 1">
+        <div class="overlay">
+          <div class="text">T-Shirt 1</div>
+        </div>
       </div>
       <div class="grid-item">
         <img src="images/sudadera.jpg" alt="t-shirt 2">
+        <div class="overlay">
+          <div class="text">T-Shirt 2</div>
+        </div>
       </div>
       <div class="grid-item">
         <img src="images/sudadera.jpg" alt="t-shirt 3">
+        <div class="overlay">
+          <div class="text">T-Shirt 3</div>
+        </div>
       </div>
-      <div class="grid-item">
-        <img src="images/sudadera.jpg" alt="t-shirt 4">
-      </div>
-      <div class="grid-item">
-        <img src="images/sudadera.jpg" alt="t-shirt 5">
-      </div>
-      <div class="grid-item">
-        <img src="images/sudadera.jpg" alt="t-shirt 6">
-      </div>
-    </div>
-  </body>
-</html>
+      <div
