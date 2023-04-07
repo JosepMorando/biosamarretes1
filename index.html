@@ -63,9 +63,29 @@
         border-radius: 10px;
         text-align: center;
       }
+      /* Style for the video container */
+      .video-container {
+        position: fixed;
+        right: 0;
+        bottom: 0;
+        min-width: 100%;
+        min-height: 100%;
+        z-index: -1;
+        overflow: hidden;
+      }
+      /* Style for the video */
+      .video-container video {
+        object-fit: cover;
+        transform: scale(1.2);
+      }
     </style>
   </head>
   <body>
+    <div class="video-container">
+      <video autoplay loop muted>
+        <source src="images/DNA.mp4" type="video/mp4">
+      </video>
+    </div>
     <h1>BIOSAMARRETES</h1>
     <div class="grid-container">
       <div class="grid-item">
@@ -79,11 +99,4 @@
         <div class="overlay">
           <div class="text">T-Shirt 2</div>
         </div>
-      </div>
-      <div class="grid-item">
-        <img src="images/sudadera.jpg" alt="t-shirt 3">
-        <div class="overlay">
-          <div class="text">T-Shirt 3</div>
-        </div>
-      </div>
-      <div
+      </
